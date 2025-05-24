@@ -1,6 +1,6 @@
 package com.DELI.model;
 
-public class Toppings {
+public class Topping {
     private  final String category;
     private final String name;
 
@@ -13,7 +13,7 @@ public class Toppings {
     public static final String sauce = "SAUCE";
     public static final String side = "SIDE";
 
-    public Toppings(String category, String name) {
+    public Topping(String category, String name) {
         this.category = category.toUpperCase();
         this.name = name;
     }
@@ -41,6 +41,10 @@ public class Toppings {
     }
 
     public String getName() {
+        return name;
+    }
+    @Override
+    public String toString(){
         return name;
     }
 }
