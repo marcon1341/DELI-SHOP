@@ -5,7 +5,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class Sandwich implements PricedItem{
-    private final int sizeInches;//" must be 4, 8 and 12 inches
+    private final int sizeInches;//must be 4, 8 and 12 inches
     private final String breadType;
     private final List<Topping> toppings;
     private final boolean toasted;
@@ -29,7 +29,7 @@ public class Sandwich implements PricedItem{
         String normalizedBread = breadType.trim().toLowerCase();
         if (!normalizedBread.equals("white") && !normalizedBread.equals("wheat")
                 && !normalizedBread.equals("rye") && !normalizedBread.equals("wrap") &&
-        !normalizedBread.equals("Ciabatta")){
+        !normalizedBread.equals("ciabatta")){
             throw new IllegalArgumentException("Bread type must be one of: white, wheat, rye, wrap, ciabatta");
         }
         Objects.requireNonNull(toppings, "Toppings list cannot be null");
@@ -53,6 +53,19 @@ public class Sandwich implements PricedItem{
         }
         return total;
     }
+    public double getBaseBreadPrice() {
+        return switch (sizeInches) {
+            case SIZE_4_INCH -> baseFourInches;
+            case SIZE_8_INCH -> baseEightInches;
+            case SIZE_12_INCH -> baseTwelveInches;
+            default -> 0.0;
+        };
+    }
+
+    public int getSizeInches() {
+        return sizeInches;
+    }
+
     public String getBreadType(){
         return this.breadType;
     }
