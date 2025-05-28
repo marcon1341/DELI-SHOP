@@ -1,5 +1,8 @@
 package com.DELI.model;
 
+import java.util.List;
+import java.util.Map;
+
 public class Drink implements PricedItem{
     private final String size;
     private final String flavour;
@@ -8,8 +11,12 @@ public class Drink implements PricedItem{
         this.size = size.toUpperCase();
         this.flavour = flavour.toUpperCase();
     }
-
-
+    //Drink flavours
+    public static final Map<String, List<String>> drinkOption = Map.of(
+            "SMALL", List.of("Coke","Sprite","Pepsi", "Lemonade", "Root Beer", "Water"),
+            "MEDIUM", List.of("Coke","Sprite","Pepsi", "Lemonade", "Root Beer", "Water"),
+            "LARGE", List.of("Coke", "Sprite","Pepsi", "Lemonade", "Root Beer", "Water")
+    );
     @Override
     public double getPrice() {
        return switch (size){
