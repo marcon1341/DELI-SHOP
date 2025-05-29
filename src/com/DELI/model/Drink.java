@@ -4,14 +4,14 @@ import java.util.List;
 import java.util.Map;
 
 public class Drink implements PricedItem{
-    private final String size;
-    private final String flavour;
+    private final String size;//small/medium/large
+    private final String flavor;
 
     public Drink(String size, String flavour) {
-        this.size = size.toUpperCase();
-        this.flavour = flavour.toUpperCase();
+        this.size = size.toUpperCase();//stores to uppercase
+        this.flavor = flavour.toUpperCase();//stores to uppercase
     }
-    //Drink flavours
+    //Drink flavours list  map for size and list for flavor
     public static final Map<String, List<String>> drinkOption = Map.of(
             "SMALL", List.of("Coke","Sprite","Pepsi", "Lemonade", "Root Beer", "Water"),
             "MEDIUM", List.of("Coke","Sprite","Pepsi", "Lemonade", "Root Beer", "Water"),
@@ -28,6 +28,6 @@ public class Drink implements PricedItem{
     }
     @Override
     public String toString(){
-        return size + " "+ flavour + " drink";
+        return size + " "+ flavor + " drink";
     }
 }
