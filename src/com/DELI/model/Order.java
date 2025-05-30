@@ -11,26 +11,45 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * represents a customer's order.
+ * An order can contain multiple priced items (such as sandwiches, drinks, chips, or specials),
+ * and supports features like bag requests, tips, and receipt generation with tax calculations.
+ */
 public class Order {
-    private final List<PricedItem> items = new ArrayList<>();
+    private final List<PricedItem> items = new ArrayList<>();//list of all items
     private static final double taxRate = 0.1025; // 10.25% tax
     private boolean bagRequested = false;
     private static final double bagFee = 0.08;
     private double tipAmount = 0.0;
     private boolean tipApplied = false;
 
-    public void requestBag() {
-        this.bagRequested = true;
-    }
-
+    /**
+     * adds a priced item (sandwich, drink, etc.) to the order.
+     * @param item the item to add and mustn't be null
+     * @throws IllegalArgumentException if the item is null
+     */
     public void addItem(PricedItem item) {
         if (item == null) {
             throw new IllegalArgumentException("Can't add null item");
         }
         items.add(item);
-        System.out.println("Added: " + item);
+        System.out.printf("Total price Added: $%.2f" , getTotal());
     }
-
+    //request a bag
+    public void requestBag() {
+        this.bagRequested = true;
+    }
+    //add a tip
+    public void addTip(double tip) {
+        if (tip < 0) return;
+        this.tipAmount = tip;
+        this.tipApplied = true;
+    }
+    /**
+     * calculates the total price of all items in the order (before tax, tip, and bag fee).
+     * @return the total sum of all item prices
+     */
     public double getTotal() {
         double total = 0.0;
         for (PricedItem item : items) {
@@ -38,15 +57,20 @@ public class Order {
         }
         return total;
     }
-
+    /**
+     * completes the checkout process, prints a detailed summary to the console,
+     * calculates subtotal, tip, tax, and total, and writes an itemized receipt to a file.
+     * The receipt is saved in the sales-receipts folder with a timestamped filename.
+     */
     public void checkout() {
         System.out.println("\n===== Order Summary =====");
-        double subtotal = 0.0;
+
         StringBuilder sb = new StringBuilder();
         sb.append("DELI-SHOP Receipt\n");
         String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd - HHmmss"));
         sb.append("Time: ").append(time).append("\n");
 
+       double subtotal = 0.0;
         for (PricedItem item : items) {
             if (item instanceof SpecialSandwiches special) {
                 // print base only
@@ -126,21 +150,14 @@ public class Order {
         System.out.printf("Total: $%.2f\n", total);
         sb.append(String.format("Total: $%.2f\n", total));
 
-        Path receiptsDir = Paths.get("receipts");
+        Path receiptsDir = Paths.get("sales-receipts");
         try {
             Files.createDirectories(receiptsDir);
             Path receiptFile = receiptsDir.resolve(time + ".txt");
             Files.writeString(receiptFile, sb.toString(), StandardOpenOption.CREATE_NEW);
             System.out.println("Receipt saved to " + receiptFile);
         } catch (IOException e) {
-            System.err.println("Failed to save receipt: " + e.getMessage());
-        }
-
-    }
-    public void addTip(double tip) {
-        if (tip < 0) return;
-        this.tipAmount = tip;
-        this.tipApplied = true;
+            System.out.println("Failed to save sales-receipts: " + e.getMessage());        }
     }
 
 }
