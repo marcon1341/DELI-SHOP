@@ -100,6 +100,13 @@
 <p>- Handles all ASCII banners.</p>
 <p>- Keeps UI friendly and visually structured.</p>
 
+**Interesting piece of code.**
+
+This method handles every menu style selection, sandwich bread, topping categories, drink flavors without rewriting the prompt logic each time.
+and able to print each options with a number.
+![Screenshot 2025-05-30 082118](https://github.com/user-attachments/assets/24ee3097-a2b7-43a0-a71b-360df7cd4819)
+
+
 **UML**
 
 ![Screenshot 2025-05-29 220155](https://github.com/user-attachments/assets/f2e9e333-3af3-4d7d-b031-b6c4a7b3589a)
