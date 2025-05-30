@@ -100,27 +100,47 @@
 <p>- Handles all ASCII banners.</p>
 <p>- Keeps UI friendly and visually structured.</p>
 
+**UML**
+
+![Screenshot 2025-05-29 220155](https://github.com/user-attachments/assets/f2e9e333-3af3-4d7d-b031-b6c4a7b3589a)
 
 ## 📸 Sample Screens
 
-![Screenshot 2025-05-28 142309](https://github.com/user-attachments/assets/e32705d0-9b33-46f2-a114-6fe3e95f0546)
-![Screenshot 2025-05-28 142732](https://github.com/user-attachments/assets/15c6fbec-da89-411e-8fa2-7d7b2a99ebc6)
-![Screenshot 2025-05-28 142818](https://github.com/user-attachments/assets/ae57155f-f99f-44fb-8970-500b96fc3cd4)
-![Screenshot 2025-05-28 142920](https://github.com/user-attachments/assets/a08ba82b-935b-4299-a0a3-69d2afced24a)
+![Screenshot 2025-05-29 204602](https://github.com/user-attachments/assets/70a20ba8-63c6-4d8f-9cbc-43428e7a3da7)
+
+![Screenshot 2025-05-29 203331](https://github.com/user-attachments/assets/11412b8e-da23-4147-95ec-5e4f642ee905)
+
+![Screenshot 2025-05-29 203306](https://github.com/user-attachments/assets/0ef4b031-601c-4e63-9735-9ce820414cc2)
+
+![Screenshot 2025-05-29 203210](https://github.com/user-attachments/assets/f2a0d064-ef58-42d1-9b15-b3d4c99afcbc)
+
+![Screenshot 2025-05-29 203109](https://github.com/user-attachments/assets/0807b1f1-d70c-4d93-9397-c8246c370a13)
+
+![Screenshot 2025-05-29 203011](https://github.com/user-attachments/assets/eb0a2591-9716-4026-ab06-d0a22809cf88)
+
+![Screenshot 2025-05-29 202949](https://github.com/user-attachments/assets/ce1dd1ef-017b-499f-9622-a3f4ca2d1c1c)
+
+![Screenshot 2025-05-29 202811](https://github.com/user-attachments/assets/9bddead8-2d41-445d-bba6-c7f465c7d209)
+
+![Screenshot 2025-05-29 202746](https://github.com/user-attachments/assets/5f81de7f-d26d-4eba-99ff-15ba8e5952d7)
+
+![Screenshot 2025-05-29 202610](https://github.com/user-attachments/assets/bb6eae64-6376-4db0-ba17-616ef465a54f)
+
+![Screenshot 2025-05-29 202534](https://github.com/user-attachments/assets/d24607b7-afb7-426a-b018-3464ff7677a6)
+
+![Screenshot 2025-05-29 202514](https://github.com/user-attachments/assets/253de230-5790-4880-bf92-f3d319541aab)
+
+![Screenshot 2025-05-29 202451](https://github.com/user-attachments/assets/6dee9493-7bac-4127-bb9e-03b16ba5efc0)
+
+![Screenshot 2025-05-29 202238](https://github.com/user-attachments/assets/876c38f6-7b93-4243-8bf9-edabd199f502)
+
+![Screenshot 2025-05-29 202022](https://github.com/user-attachments/assets/04517e4e-c4fc-4e49-be7d-b2cfe6de450a)
 
 
-**Special Sandwich Screen**
-
-![Screenshot 2025-05-28 143648](https://github.com/user-attachments/assets/e0d4ab3a-313f-4c58-aad0-b7fdff65cac0)
 
 
 
 
-**Drink and chips screen**
-
-
-![Screenshot 2025-05-28 143444](https://github.com/user-attachments/assets/20761ba1-5c9c-45a1-a3b9-966f5c661030)
-![Screenshot 2025-05-28 143419](https://github.com/user-attachments/assets/3aa54795-14d2-4515-ac47-f2a28da77353)
 
 
 
